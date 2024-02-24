@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'poppins', sans-serif;
+    background: #202021;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backkk {
+    width: 0rem;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    top: -5rem;
+    left: -10rem;
+}
+.backkk img {
+    width: 100rem;
+}
+.container {
+    width: 350px;
+    height: 500px;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.front, .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 1px #fdaf55 solid;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 40px rgba(255, 255, 255, 0.50); 
+}
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(asset/light-cone-patience-is-all-you-need-artwork.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;  
+}
+.back {
+    background-color: #262626;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+.back img {
+    width: 12.5rem;
+}
